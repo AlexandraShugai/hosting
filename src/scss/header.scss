@@ -1,0 +1,130 @@
+header {
+  padding: 15px 0;
+}
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo {
+}
+.nav-all {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+ul {
+  display: flex;
+}
+.nav-list-item {
+  margin-left: 20px;
+  border: 2px solid transparent;
+}
+.nav-list-item:hover {
+  border-bottom: 2px solid $red;
+  transform: scale(1, 1);
+}
+.nav-list-item a {
+  color: $black;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.nav-list-item:last-child {
+  margin-left: 100px;
+  @media (max-width: 940px) {
+    margin-left: 50px;
+  }
+  @media (max-width: 800px) {
+    margin-left: 14px;
+  }
+}
+.nav-list-item:first-child {
+  margin-left: 100px;
+  @media (max-width: 940px) {
+    margin-left: 50px;
+  }
+  @media (max-width: 800px) {
+    margin-left: 14px;
+  }
+}
+.nav-list-item:nth-child(3n) {
+  margin-left: 20px;
+}
+.nav-list-tel {
+}
+.tel a {
+  color: $black;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.tel {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.tel::before {
+  content: "";
+  display: inline-block;
+  background-color: $grey;
+  border: 1px solid $grey;
+  height: 12px;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+.burger {
+  display: none;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  transition: 0.4s;
+  cursor: pointer;
+  @media (max-width: 700px) {
+    display: flex;
+  }
+}
+.fas {
+  background-color: transparent;
+  color: $red;
+  margin-right: 4px;
+}
+.burger span {
+  width: 100%;
+  height: 2px;
+  background-color: $red;
+  display: block;
+  position: absolute;
+  top: 9px;
+  transition: 0.4s;
+}
+.burger::before,
+.burger::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: $red;
+  position: absolute;
+  transition: 0.4s;
+  transform-origin: center;
+}
+.burger::before {
+  top: 0;
+}
+.burger::after {
+  bottom: 0;
+}
+.burger:hover::before {
+  transform: rotate(45deg);
+  top: 9px;
+}
+.burger:hover::after {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+.burger:hover span {
+  display: none;
+}
